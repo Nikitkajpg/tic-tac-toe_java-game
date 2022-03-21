@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.td.tictactoe.Controller" stylesheets="@../styles/main-style.css">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu text="File">
+            <MenuItem text="New game" onAction="#newGame"/>
+            <Menu text="Settings...">
+                <Menu text="Game mode">
+                    <RadioMenuItem fx:id="pve" onAction="#pveMode" text="PvE"/>
+                    <RadioMenuItem fx:id="pvp" onAction="#pvpMode" text="PvP"/>
+                </Menu>
+                <Menu text="Difficulty">
+                    <RadioMenuItem fx:id="easy" onAction="#easyDif" text="Easy"/>
+                    <RadioMenuItem fx:id="medium" onAction="#mediumDif" text="Medium"/>
+                    <RadioMenuItem fx:id="hard" onAction="#hardDif" text="Hard"/>
+                </Menu>
+            </Menu>
+            <MenuItem text="Quit" onAction="#exit"/>
+        </Menu>
+        <Menu text="Help">
+            <MenuItem text="About TicTacToe"/>
+        </Menu>
+    </MenuBar>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <Pane fx:id="pane" minHeight="600" minWidth="600" maxHeight="600" maxWidth="600" AnchorPane.leftAnchor="10"
+              AnchorPane.topAnchor="10"/>
+        <VBox AnchorPane.leftAnchor="640" AnchorPane.topAnchor="100">
+            <Button onAction="#newGame" text="New game">
+                <VBox.margin>
+                    <Insets>
+                        <bottom>40</bottom>
+                    </Insets>
+                </VBox.margin>
+            </Button>
+            <Label fx:id="vs" wrapText="true"/>
+            <Label text="Your score:"/>
+            <Label fx:id="wins"/>
+            <Label fx:id="draws"/>
+            <Label fx:id="losses"/>
+            <Button onAction="#reset" text="Reset score">
+                <VBox.margin>
+                    <Insets>
+                        <top>20</top>
+                    </Insets>
+                </VBox.margin>
+            </Button>
+            <Button fx:id="listOfPlayers" text="Show player list">
+                <VBox.margin>
+                    <Insets>
+                        <top>20</top>
+                    </Insets>
+                </VBox.margin>
+            </Button>
+            <VBox>
+                <HBox>
+                    <TextField fx:id="firstPlayer" visible="false"/>
+                </HBox>
+                <HBox>
+                    <TextField fx:id="secondPlayer" visible="false"/>
+                </HBox>
+                <HBox fx:id="hBox1">
+                    <TextField fx:id="easyAI" visible="false"/>
+                    <Label text="(AI)" visible="false"/>
+                </HBox>
+                <HBox fx:id="hBox2">
+                    <TextField fx:id="mediumAI" visible="false"/>
+                    <Label text="(AI)" visible="false"/>
+                </HBox>
+                <HBox fx:id="hBox3">
+                    <TextField fx:id="hardAI" visible="false"/>
+                    <Label text="(AI)" visible="false"/>
+                </HBox>
+            </VBox>
+        </VBox>
+        <HBox minHeight="25" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0">
+            <Label fx:id="modeLabel">
+                <HBox.margin>
+                    <Insets>
+                        <left>10</left>
+                    </Insets>
+                </HBox.margin>
+            </Label>
+            <Label fx:id="difLabel">
+                <HBox.margin>
+                    <Insets>
+                        <left>50</left>
+                    </Insets>
+                </HBox.margin>
+            </Label>
+        </HBox>
+    </AnchorPane>
+</VBox>

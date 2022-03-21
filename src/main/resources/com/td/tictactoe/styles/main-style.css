@@ -1,0 +1,80 @@
+.menu, .menu-bar, VBox, HBox, Pane {
+    -fx-background-color: #F8F4A6;
+}
+
+.menu-bar {
+    -fx-border-color: #F8F4A6 #F8F4A6 #25291C #F8F4A6;
+    -fx-border-width: 2;
+}
+
+.menu .label, .label, .button .text {
+    -fx-text-fill: #25291C;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-font-family: Consolas;
+}
+
+.menu:hover, .menu-item:hover {
+    -fx-background-color: #8F8F61;
+    -fx-cursor: hand;
+}
+
+.context-menu {
+    -fx-padding: 0;
+    -fx-border-color: #25291C;
+    -fx-background-color: #25291C;
+    -fx-border-width: 2 0 0 0;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.menu-item {
+    -fx-background-radius: 8;
+    -fx-background-color: #FAF8C6;
+    -fx-border-color: #25291C;
+    -fx-border-radius: 5;
+    -fx-border-width: 0 2 2 2;
+    -fx-focused-mark-color: #25291C;
+    -fx-mark-color: #25291C;
+}
+
+.context-menu .separator:horizontal .line {
+    -fx-border-color: #25291C;
+    -fx-background-color: #25291C;
+    -fx-border-width: 0.25;
+}
+
+.button {
+    -fx-background-color: #FAF8C6;
+    -fx-border-color: #25291C;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 6;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #8F8F61;
+    -fx-background-radius: 6;
+}
+
+.menu-item .arrow {
+    -fx-background-color: #FAF8C6;
+    -fx-border-color: #25291C;
+}
+
+.tooltip {
+    -fx-background-color: #FAF8C6;
+    -fx-text-fill: #25291C;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-font-family: Consolas;
+}
+
+.text-field {
+    -fx-background-color: #F8F4A6;
+    -fx-text-fill: #25291C;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-font-family: Consolas;
+}
